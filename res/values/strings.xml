@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Expeyes Server</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="remote_help">
+<![CDATA[
+<p>Example Python script to help test this..</p>
+
+<p>#--------------------------------------------------</p>
+
+<p>import socket<br />
+from pylab import *<br />
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)<br />
+s.connect((&#39;IP address shown above&#39;,Port displayed above))</p>
+
+<p>f = s.makefile()<br />
+s.send(&#39;get_voltage(1)\\n&#39;)<br />
+s.send(&#39;read(value)\\n&#39;)<br />
+print s.recv(100)</p>
+
+<p>s.send(&#39;capture(1,500,30)\\n&#39;) #capture 500 points<br />
+s.send(&#39;read(t1,ch1)\\n&#39;)<br />
+x=f.readline()<br />
+y=f.readline()<br />
+a=[float(i) for i in x.split(&#39;,&#39;)] #float array from ASCII string<br />
+b=[float(i) for i in y.split(&#39;,&#39;)]<br />
+plot(a,b)<br />
+show()</p>
+
+<p>&nbsp;</p>
+
+<p>#--------------------------------------------------</p>
+
+
+]]>
+    </string>
+</resources>
